@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <div class="card p-3">
+    <h4>Edit article</h4>
+        <%= form_for(@article) do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control w-100" %>
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control w-100" %>
+        <%= f.submit :class => 'btn btn-dark mt-2' %>
+        <% end %>
+    </div>
+</div>

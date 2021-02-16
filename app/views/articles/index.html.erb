@@ -1,0 +1,16 @@
+
+<nav class="navbar navbar-light bg-dark">
+  <form class="form-inline">
+<%= link_to "New Article", new_article_path, class: "btn btn-dark" %>
+  </form>
+</nav>
+
+<div class="container">
+<% @articles.each do |article| %>
+    <div class="card m-2 p-2">
+        <h4><%= link_to article[:title],
+            article_path(article) %></h4>
+        <p><%= article.content.first(100) %>...<%= link_to "read more", article_path(article) %></p>
+    </div>
+<% end %>
+</div>
